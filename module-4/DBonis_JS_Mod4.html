@@ -1,0 +1,27 @@
+﻿<!-- Dylan Bonis
+     Module 4.2 Javascript
+     4/1/23-->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript Parenthesis Test</title>
+    <script>
+        var i = 842;
+        document.write("Base: " + (i + i % 3 / 7 - 2 + 7 ** 3) + "<br>");   // Base 1183.2857142857142
+        document.write("Case 1: " + ((i + i) % 3 / 7 - 2 + 7 ** 3) + "<br>");   //341.14285714285717
+        document.write("Case 2: " + (i + i % 3 / (7 - 2) + 7 ** 3) + "<br>");   //1185.4
+        document.write("Case 3: " + (i + i % 3 / (7 - 2 + 7) ** 3) + "<br>");   //842.0011574074074
+        document.write("Case 4: " + (i + i % 3 / 7 - (2 + 7) ** 3) + "<br>");   //113.28571428571433
+        document.write("Case 5: " + ((i + i) % 3 / (7 - 2) + 7 ** 3) + "<br>"); //343.2
+        document.write("Case 6: " + (i + i % 3 / (7 - (2 + 7)) ** 3));   //841.75
+        
+        
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
