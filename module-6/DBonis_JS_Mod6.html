@@ -1,0 +1,35 @@
+﻿<!-- Dylan Bonis
+     Module 6.2 Javascript
+     4/15/23-->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Mod 6 Assignment</title>
+    <script>
+        //Make a first second and next variable to describe fibbonaci sequence and a counter
+        var int1 = 1;
+        var int2 = 1;
+        var next = 0;
+        var counter = 1
+        //Write the first two numbers
+        document.write(counter + " - " + int1 + "<br>");
+        counter++;
+        document.write(counter + " - " + int2 + "<br>");
+        counter++;
+        //For 3-30 in the fibbonachi sequence, write the number next to it's counter
+        for (counter; counter < 31; counter++) {
+            next = int1 + int2;
+            document.write(counter + " - " + next + "<br>");
+            int1 = int2;
+            int2 = next;
+        }
+        
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!-- Dylan Bonis 4/17/23
+     Module 9.2 Javascript
+     Create a function titled counter that takes an array of numbers as the parameter. The function is then to return an array holding the numbers of negative elements, zeros, and values greater than zero in the given array parameter.
+     -->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Mod 9 Assignment</title>
+    <link type="text/css" href="DBonis_JS_Mod9.css" rel="stylesheet" >
+    <script>
+        //Array of numbers used
+        numbers = [1, 2, 5, 0, -1, 3, 0, -9, -8, -6];
+
+        //Write the numbers used, send the mto be counted, and the results
+        document.write("<p> Numbers used: ");
+        printArray(numbers);
+        counted = counter(numbers);
+        document.write("<p>Numbers Returned: ");
+        printArray(counted);
+
+        //Takes an array, counts the number of values below, equal to, and more than zero
+        function counter(array) {
+            counted = [0, 0, 0];
+            for (var i = 0; i < array.length; i++) {
+
+                if (array[i] < 0) 
+                    counted[0]++;
+                else if (array[i] == 0) 
+                    counted[1]++;
+                else 
+                    counted[2]++;
+            }
+            return counted;
+        }
+
+        //A function that takes an array and prints it, assuming that it starts with a paragraph tag
+        function printArray(array) {
+            for (var i = 0; i < array.length; i++) {
+                if (i == array.length - 1)
+                    document.write(array[i] + "</p><br/>");
+                else
+                    document.write(array[i] + ", ");
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

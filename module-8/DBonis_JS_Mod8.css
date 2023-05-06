@@ -1,0 +1,17 @@
+﻿/* Dylan Bonis 4/17/23
+    Module 8.2 Assignment
+    CSS for JS 8 assignment
+*/
+table, th, td
+{
+    border: solid black 2px;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 4px;
+}
+
+.greyrow{
+    background-color: rgba(128, 128, 128, .4);
+}
