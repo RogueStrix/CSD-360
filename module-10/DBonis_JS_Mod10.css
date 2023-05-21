@@ -1,0 +1,59 @@
+﻿/* Dylan Bonis 5/6/23
+    Module 10.2 Assignment
+    CSS for JS 10 assignment
+*/
+body {
+    margin: 0;
+}
+
+h1{
+    color: white;
+}
+
+
+p{
+    font-size: x-large;
+}
+
+figure{
+    margin:0;
+}
+#hover-select {
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+.unselected{
+    float:left;
+    border: 2px black dashed;
+    width: 50%;
+    text-align: center;
+}
+
+.selected {
+    float: left;
+    border: 2px black dashed;
+    width: 50%;
+    text-align: center;
+    background-color: black;
+    border: 2px white dashed;
+    color: white;
+}
+
+#name_bar {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#text-with-space {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#select1, #select2{
+    position: static;
+}

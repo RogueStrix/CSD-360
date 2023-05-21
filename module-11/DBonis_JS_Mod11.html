@@ -1,0 +1,61 @@
+﻿<!--
+    Dylan Bonis
+    Mod 11 Assignment
+    5/12/23
+    I made snake following through this tutorial: https://www.youtube.com/watch?v=baBq5GAL0_U
+    I also made my own improvements, changed function, design, and grouping.
+    The onClick is just a cheat to increase snake length :)
+-->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Bonis Snake Game</title>
+
+    <link rel="stylesheet" type="text/css" href="DBonis_JS_Mod11.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <script src="DBonis_JS_Mod11.js"></script>
+    <script>
+        function eatFoodCheat() {
+            snakeBody.push([foodX, foodY]);
+            placeFood();
+        }
+    </script>
+</head>
+<body>
+    <h1 id="pageHeading" onclick="eatFoodCheat()"><img src="snake.webp" height="35" width="60"/>Javascript Snake</h1>
+    <p id="applesLeft"></p>
+    <form>
+        <p>Game Options</p>
+        <input type="checkbox" id="noWalls" value="0">
+        <label for="vehicle1">No Walls</label>
+        <br><br>
+        <button onClick="window.location.reload();">Restart</button>
+    </form>
+    <canvas id="board"></canvas>
+    <table>
+        <tr>
+            <th>Game Controls</th>
+        </tr>
+        <tr>
+            <td><p>W or ^ for up</p></td>
+        </tr>
+        <tr>
+            <td><p>A or &lt; for left</p></td>
+        </tr>
+        <tr>
+            <td><p>S or v for down </p></td>
+        </tr>
+        <tr>
+            <td><p>D or &gt; for right</p></td>
+        </tr>
+        <tr>
+            <td><p>Esc to pause </p></td>
+        </tr>
+    </table>
+</body>
+</html>

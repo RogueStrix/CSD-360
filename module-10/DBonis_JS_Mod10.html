@@ -1,0 +1,76 @@
+﻿<!-- Dylan Bonis 5/6/23
+     Module 10.2 Javascript
+     Using information you have interest in, create a page with style alterations based on user events such as an image change, font style and/or color, and background color.
+     Nasa images are in the public domain! So, I thought this would be a fun way of showing them off.
+      -->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Mod 10 Assignment</title>
+    <link type="text/css" href="DBonis_JS_Mod10.css" rel="stylesheet">
+    <script>
+        var caption1 = "The picture shown is of a neraby young star in out galaxy called NGC 3324. The photo was taken with NASA&rsquo;s new James Webb Space Telescope midway through 2022. The star looks very similar to the mountains and valleys that you may see here on Earth, which is kinda cool.";
+        var caption2 = "This photo if of a never-before-seen view of a star-forming region in the Carina Nebula where the James Webb Telescope was able to capture the image using Near-Infrared Camer and a Mid-Infrared Instrument";
+
+        //changes the background color of the bar and image depending on what color the font is, black or white.
+        function changeBackgroundColor() {
+            var color = document.getElementById("title").style.color;
+            if (color === "black") {
+                document.getElementById("title").style.color = 'white';
+                document.getElementById("name_bar").style.backgroundColor = 'black';
+                document.getElementById("nasa").src = "nasa.png";
+            }
+            else {
+                document.getElementById("title").style.color = 'black';
+                document.getElementById("name_bar").style.backgroundColor = 'white';
+                document.getElementById("nasa").src = "nasa-nocolor.png";
+            }
+        }
+        //changes the photo and text inside of the figure element depending on what number is sent to the function 1 or 2
+        function changePhoto(photo) {
+            if (photo === 1) {
+                document.getElementById("photo").src = "cosmic-cliffs.png";
+                document.getElementById("text").innerHTML = caption1;
+                document.getElementById("select1").className = "selected";
+                document.getElementById("select2").className = "unselected";
+
+
+
+            }
+            else {
+                document.getElementById("photo").src = "cosmic-cliffs-2.png";
+                document.getElementById("text").innerHTML = caption2;
+                document.getElementById("select2").className = "selected";
+                document.getElementById("select1").className = "unselected";
+            }
+        }
+
+        
+    </script>
+</head>
+<body>
+    <div id="name_bar" onclick="changeBackgroundColor()">
+        <img id="nasa" src="nasa.png" height="64" width="70" /> <h1 id="title"> Mod 10, But Make It Nasa</h1>
+    </div>
+    <div id="text-with-space">
+        <figure>
+            <img id ="photo" src="cosmic-cliffs.png" />
+            <p id="text">
+                The picture shown is of a neraby young star in out galaxy called NGC 3324. The photo was taken with NASA’s new James Webb Space Telescope midway through 2022. 
+                The star looks very similar to the mountains and valleys that you may see here on Earth, which is kinda cool.
+            </p>
+        </figure>
+    </div>
+    <!-- When hovered over, both of the divs will call the function changePhoto with the corresponding number-->
+    <div id="hover-select">
+        <div class="selected" id="select1" onmouseover="changePhoto(1)">
+            <p>Image 1</p>
+        </div>
+        <div class="unselected" id="select2" onmouseover="changePhoto(2)">
+            <p>Image 2</p>
+        </div>
+    </div>
+</body>
+</html>
